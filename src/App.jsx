@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import InputSearch from "./components/InputSearch";
+import getIpData from "./utils/getIpData";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [ip, setIp] = useState("");
+  const [ipData, setIpData] = useState(null);
+
+  useEffect(() => {
+    getIpData(ip).then((r) => {
+      setIp(r.query);
+      setIpData(r);
+    });
+  }, [ip, setIp, setIpData]);
 
   return (
     <div>
-      <h1>Hola mundo</h1>
+      <InputSearch ip={ip} setIp={setIp} />
     </div>
   );
 }
