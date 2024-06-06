@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import InputSearch from "./components/InputSearch";
 import Map from "./components/Map";
+import ResultGrid from "./components/ResultGrid";
 import getIpData from "./utils/getIpData";
 import { isIP } from "is-ip";
 import "./App.css";
@@ -22,22 +23,28 @@ function App() {
       setIp(ipRes);
     } else {
       if (ipRes === "") {
-        alert("Please, input a IP Address");
+        alert("Please enter an IP address");
       } else {
-        alert("IP Address Invalid");
+        alert("Invalid IP Address");
       }
     }
   };
 
   return (
-    <div>
-      <InputSearch
-        ipRes={ipRes}
-        setIpRes={setIpRes}
-        handleIpSearch={handleIpSearch}
-      />
+    <main className="main">
+      <header className="header">
+        <h1 className="logo">IP Address Tracker</h1>
+      </header>
+      <section className="form">
+        <InputSearch
+          ipRes={ipRes}
+          setIpRes={setIpRes}
+          handleIpSearch={handleIpSearch}
+        />
+        <ResultGrid ipData={ipData} />
+      </section>
       <Map ip={ip} ipData={ipData} />
-    </div>
+    </main>
   );
 }
 

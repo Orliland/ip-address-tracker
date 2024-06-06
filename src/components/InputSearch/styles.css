@@ -1,5 +1,8 @@
 .search {
   display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 55.5rem;
 }
 
 .search__input {
@@ -18,7 +21,7 @@
 }
 
 .search__input::placeholder {
-  opacity: 0.5;
+  color: var(--gray-transparent);
 }
 
 .search__button {

@@ -1,5 +1,5 @@
 async function getIpData(ip) {
-  const url = `http://ip-api.com/json/${ip}?fields=25592`;
+  const url = `http://ip-api.com/json/${ip}?fields=58356`;
   let response = await fetch(url);
   try {
     let request = await response.json();

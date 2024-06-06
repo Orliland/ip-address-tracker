@@ -5,11 +5,24 @@
   --black: #000000;
   --light-black: #3f3f3f;
   --black-transparent: hsla(0, 0%, 0%, 9.84%);
+  --black-border: hsla(0, 0%, 0%, 15%);
   --white: #ffffff;
   --gray: #2c2c2c;
+  --gray-transparent: #2c2c2c78;
   --box-shadow: 0 5rem 5rem -2.5rem var(--black-transparent);
 
-  --body-regular: 400 1.8rem;
+  --label: 600 1rem "Rubik Variable", sans-serif;
+  --label-m: 600 1.2rem "Rubik Variable", sans-serif;
+  --label-l: 500 2rem "Rubik Variable", sans-serif;
+  --label-xl: 500 2.6rem "Rubik Variable", sans-serif;
+  --body-regular: 400 1.8rem "Rubik Variable", sans-serif;
+  --heading: 500 2.6rem "Rubik Variable", sans-serif;
+  --heading-l: 500 3rem/3.2rem "Rubik Variable", sans-serif;
+  --ls-1: -0.023rem;
+  --ls-2: -0.029rem;
+  --ls-3: 0.146rem;
+  --ls-4: -0.018rem;
+  --ls-4: 0.175rem;
 }
 
 body {
