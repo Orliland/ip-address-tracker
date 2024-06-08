@@ -3,7 +3,7 @@ import InputSearch from "./components/InputSearch";
 import Map from "./components/Map";
 import ResultGrid from "./components/ResultGrid";
 import getIpData from "./utils/getIpData";
-import { isIP } from "is-ip";
+import { isIP } from "./is-ip";
 import "./App.css";
 
 function App() {
