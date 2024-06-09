@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 
 // Supports weights 300-900
-// import "@fontsource-variable/rubik";
+import "@fontsource-variable/rubik";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

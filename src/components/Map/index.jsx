@@ -4,9 +4,18 @@ import "./styles.css";
 export default function Map({ ip, ipData }) {
   const LocationMarker = () => {
     const map = useMap();
-    map.flyTo(ip === "" ? [51.505, -0.09] : [ipData.lat, ipData.lon], 13);
+    map.flyTo(
+      ip === "" ? [51.505, -0.09] : [ipData.location.lat, ipData.location.lng],
+      13
+    );
     return (
-      <Marker position={ip === "" ? [51.505, -0.09] : [ipData.lat, ipData.lon]}>
+      <Marker
+        position={
+          ip === ""
+            ? [51.505, -0.09]
+            : [ipData.location.lat, ipData.location.lng]
+        }
+      >
         <Popup>You are here</Popup>
       </Marker>
     );

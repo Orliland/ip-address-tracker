@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/rubik": "^5.0.22",
     "is-ip": "^5.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

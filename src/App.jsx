@@ -13,8 +13,9 @@ function App() {
 
   useEffect(() => {
     getIpData(ip).then((r) => {
+      console.log(r);
       setIpData(r);
-      setIp(r.query);
+      setIp(r.ip);
     });
   }, [ip, setIp, setIpData]);
 

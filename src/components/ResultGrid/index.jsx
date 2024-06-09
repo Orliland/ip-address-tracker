@@ -14,19 +14,19 @@ export default function ResultGrid({ ipData }) {
     <div className="results">
       <Result
         label="IP ADDRESS"
-        value={ipData == null ? "loading" : ipData.query}
+        value={ipData == null ? "loading" : ipData.ip}
       />
       <Result
         label="LOCATION"
         value={
           ipData == null
             ? "loading"
-            : `${ipData.city}, ${ipData.region} ${ipData.zip}`
+            : `${ipData.location.city}, ${ipData.location.region} ${ipData.location.postalCode}`
         }
       />
       <Result
         label="TIMEZONE"
-        value={ipData == null ? "loading" : ipData.timezone}
+        value={ipData == null ? "loading" : ipData.location.timezone}
       />
       <Result label="ISP" value={ipData == null ? "loading" : ipData.isp} />
     </div>
