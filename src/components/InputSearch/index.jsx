@@ -12,7 +12,7 @@ export default function InputSearch({ ipRes, setIpRes, handleIpSearch }) {
         className="search__input"
         type="text"
         value={ipRes}
-        placeholder="Search for any IP address or domain"
+        placeholder="Search for any IP address"
         onChange={(e) => handleIpChange(e)}
         onKeyUp={(e) => {
           if (e.key === "Enter") {
